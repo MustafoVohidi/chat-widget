@@ -1,0 +1,38 @@
+@import 'variables';
+
+@mixin theme-blue-new {
+  color: $black;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+
+  input,
+  button,
+  textarea {
+    font-size: $fontSize;
+    font-family: $fontFamily;
+  }
+
+  .chat-box {
+    @import 'activator';
+    @import 'card';
+    @import 'input';
+    @import 'icon';
+    @import 'button';
+    @import 'message';
+    @import 'custom';
+  }
+
+  .chat-box-activator-chat.active {
+    display: none;
+  }
+
+  @media (min-width: $sm) and (max-height: 1000px) {
+    .chat-box {
+      bottom: 10px;
+    }
+    .chat-box-card {
+      height: calc(100% - 50px);
+    }
+  }
+}
+

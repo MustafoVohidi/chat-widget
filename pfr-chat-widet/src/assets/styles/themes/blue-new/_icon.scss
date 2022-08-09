@@ -1,0 +1,20 @@
+@import 'variables';
+
+.icon {
+  &.icon-resize {
+    background-image: url($resizeIcon);
+  }
+  &.icon-send {
+    background-image: url($sendIcon);
+    height: 28px;
+    width: 28px;
+    border-radius: 100px;
+    background-size: contain;
+    position: relative;
+  }
+  &.icon-close {
+    background-image: url($closeIconMini);
+    position: relative;
+    top: 2px;
+  }
+}

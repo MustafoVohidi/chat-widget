@@ -1,0 +1,13 @@
+@import 'default';
+@import 'blue';
+@import 'blue-new';
+
+.theme-default {
+  @include theme-default;
+}
+.theme-blue {
+  @include theme-blue;
+}
+.theme-blue-new {
+  @include theme-blue-new;
+}

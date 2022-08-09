@@ -1,0 +1,49 @@
+@import 'variables';
+
+&-activator {
+  display: flex;
+  gap: 5px;
+  flex-direction: row-reverse;
+  &-chat,
+  &-call {
+    transition: width 0.1s;
+  }
+
+  &-chat {
+    background-color: $primaryLight;
+    font-weight: bold;
+    color: $primary;
+    cursor: pointer;
+    line-height: 40px;
+    font-size: 16px;
+    height: 40px;
+    width: 185px;
+    text-align: center;
+  }
+  &-chat::after {
+    content: 'ЗАДАТЬ ВОПРОС';
+  }
+  &-call {
+    background-color: $primary;
+    background-image: url($callIcon);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    padding-right: 5px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+  }
+  &-chat.active {
+    background-color: $primary;
+    background-image: url($closeIcon);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 40px;
+    font-size: 0;
+    margin-right: -5px;
+  }
+  &-call.hidden {
+    width: 0;
+    padding-right: 0px;
+  }
+}

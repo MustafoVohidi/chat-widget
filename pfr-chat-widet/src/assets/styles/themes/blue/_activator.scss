@@ -1,0 +1,58 @@
+@import 'variables';
+
+&-activator {
+  text-align: center;
+  line-height: 64px;
+  border-radius: 32px;
+  display: flex;
+  &-chat,
+  &-call {
+    background-color: $blue;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 64px;
+    height: 64px;
+    font-size: 0px !important;
+    color: transparent;
+    box-shadow: 0 0 5px #000;
+  }
+  & > *:first-child {
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+  }
+  & > *:last-child {
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+  }
+  &-chat:hover,
+  &-call:hover {
+    background-color: $blueLight;
+  }
+  &-chat:active,
+  &-call:active {
+    background-color: $blueLight;
+    background-position-y: 55%;
+  }
+  &-chat {
+    background-image: url($chatIcon);
+    transition: border-top-left-radius 0.1s,
+      border-bottom-left-radius 0.1s;
+  }
+  &-chat.active {
+    background-image: url($closeIcon);
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    border-top-left-radius: 32px;
+    border-bottom-left-radius: 32px;
+    transition: border-top-left-radius 0.15s 0.1s,
+      border-bottom-left-radius 0.15s 0.1s;
+  }
+  &-call {
+    background-image: url($callIcon);
+    transition: width 0.1s 0.1s;
+  }
+  &-call.hidden {
+    width: 0;
+    transition: width 0.1s;
+  }
+}

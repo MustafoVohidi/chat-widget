@@ -1,0 +1,52 @@
+@import 'variables';
+
+.chat-message {
+  &-content {
+    &-title {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      gap: 20px;
+      color: $primary;
+      &-name {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-avatar {
+    width: 50px;
+    height: 50px;
+  }
+}
+.chat-message-system {
+  .chat-message-content {
+    width: calc(100% - 70px);
+    background-color: $secondaryLight;
+    color: $black;
+    border-radius: 0px 4px 4px 4px;
+  }
+  .chat-message-avatar {
+    background-image: url($systemAvatar);
+  }
+}
+.chat-message-operator {
+  .chat-message-content {
+    width: calc(100% - 70px);
+    background-color: $white;
+    color: $black;
+  }
+  .chat-message-avatar {
+    background-image: url($operatorAvatar);
+  }
+}
+.chat-message-user {
+  .chat-message-content {
+    background-color: $primaryLight;
+    border-radius: 4px 0px 4px 4px;
+    color: $black;
+  }
+  .chat-message-avatar {
+    display: none;
+  }
+}

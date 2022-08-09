@@ -1,0 +1,39 @@
+&-card {
+  box-shadow: 0 4px 4px #aaa;
+  border-radius: 8px;
+  width: 350px;
+
+  & > *:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  & > *:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  &-header {
+    background-color: $blue;
+    color: $white;
+    align-items: start;
+    box-shadow: 0 5px 5px #ccc;
+    z-index: 2;
+    &-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    &-download,
+    &-close {
+      display: none;
+    }
+    &-download,
+    &-close,
+    &-resize {
+      margin-top: 5px;
+    }
+  }
+  &-body {
+    background-color: $greyLight;
+    color: $black;
+  }
+}

@@ -1,0 +1,10 @@
+include:
+  - project: "deployments/ci-templates"
+    # ref: CI
+    file: "/gitlab/templates/.gitlab-ci-node-12-helm-yarn.yml"
+
+satelkube_pfr:
+  extends: .satelkube-pfr
+  
+pfr_rtk:
+  extends: .pfr-rtk

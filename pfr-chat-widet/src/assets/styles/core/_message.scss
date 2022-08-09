@@ -1,0 +1,89 @@
+.system-message {
+  text-align: center;
+  font-size: 90%;
+  font-style: italic;
+}
+
+.messages {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.messages::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.messages::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #fff;
+  -webkit-box-shadow: inset 0 0 6px #fff;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: $blueLightOpacity;
+  outline: none;
+  border-radius: 12px;
+}
+
+.chat-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.chat-message-content {
+  padding: 12px 20px;
+  position: relative;
+  border-radius: 0px 25px 25px 25px !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+.chat-message-user {
+  justify-content: flex-end;
+}
+.chat-message-user > .chat-message-content {
+  border-radius: 5px 0px 5px 5px;
+  background-color: $primaryLight;
+}
+
+.chat-message-content {
+  padding: 12px 20px;
+  position: relative;
+  border-radius: 0px 25px 25px 25px !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+.theme-blue .chat-box .chat-message-system .chat-message-content{
+  background-color: #F7F7FF !important;
+}
+
+.chat-message-system > .chat-message-content,
+.chat-message-operator > .chat-message-content {
+  border-radius: 0px 5px 5px 5px;
+  background-color: $secondaryLight;
+}
+
+.chat-message-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: 100% 100%;
+}
+
+.chat-message-content-body {
+  word-break: break-word;
+}
+.chat-message-content-title{
+  position: absolute;
+  top: -20px;
+  left: 0;
+  flex-direction: row;
+}
+
+.chat-message-system
+  + .chat-message-system
+  > .chat-message-avatar,
+.chat-message-operator
+  + .chat-message-operator
+  > .chat-message-avatar {
+  opacity: 0;
+}

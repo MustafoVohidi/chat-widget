@@ -1,0 +1,29 @@
+.app-textarea {
+  position: relative;
+  textarea {
+    color: $primary;
+    display: block;
+    width: 100%;
+    height: 58px;
+    border: 1px solid $secondaryLight;
+    resize: none;
+    overflow: hidden;
+    padding-right: 50px;
+  }
+
+  textarea:focus {
+    outline: none;
+  }
+
+  &-actions {
+    position: absolute;
+    right: 20px;
+    bottom: 22px;
+    height: 32px;
+    cursor: pointer;
+  }
+
+  &-actions.disabled {
+    cursor: not-allowed;
+  }
+}

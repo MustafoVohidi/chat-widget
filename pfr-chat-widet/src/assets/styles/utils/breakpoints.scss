@@ -1,0 +1,25 @@
+$xs: 480px;
+$sm: 768px;
+$md: 1024px;
+
+.xs-hidden {
+  @media (max-width: $xs) {
+    display: none !important;
+  }
+}
+.xs-visible {
+  @media (min-width: $xs) {
+    display: none !important;
+  }
+}
+
+.sm-hidden {
+  @media (max-width: $sm) {
+    display: none !important;
+  }
+}
+.sm-visible {
+  @media (min-width: $sm) {
+    display: none !important;
+  }
+}

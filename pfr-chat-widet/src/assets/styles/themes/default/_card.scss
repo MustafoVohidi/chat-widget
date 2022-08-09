@@ -1,0 +1,23 @@
+.chat-box-card {
+  box-shadow: 0 0 2px black;
+  width: 400px;
+
+  &-header {
+    padding: 15px 20px;
+    background: $secondary;
+    &-title {
+      color: #fff;
+    }
+    &-subtitle {
+      color: $primaryLight;
+    }
+  }
+
+  &-body {
+    background-color: #fff;
+
+    .ready-answers {
+      border-top: 1px solid $secondaryLight;
+    }
+  }
+}

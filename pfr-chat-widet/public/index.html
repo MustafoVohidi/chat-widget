@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0"
+    />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      * {
+        text-align: justify;
+      }
+    </style>
+    <link href=/js/app.js rel=preload as=script>
+    <link href=/js/chunk-vendors.js rel=preload as=script>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title
+        %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong
+      >
+    </noscript>
+    <widget-chat></widget-chat>
+    <script>
+      const rosTrudOptions = {
+        theme: 'blue-new',
+        // phone: '88002000010',
+        ws: 'wss://camunda.cc.gov.ru/pfr1/route_request_text',
+        header: {
+          title: '8-800-6-000-000',
+          text:
+            'Единый контакт-центр',
+        },
+      }
+      const defaultOptions = {
+        // theme: 'default',
+        theme: 'blue',
+        phone: '88002000010',
+      }
+      const developOptions = {
+        ws:
+          'wss://camunda.kube.satel.org/pfr1/route_request_text',
+      }
+      const chatWidget = document.querySelector(
+        'widget-chat'
+      )
+      chatWidget.options = rosTrudOptions
+    </script>
+    <script src=/js/chunk-vendors.js></script>
+    <script src=/js/app.js></script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

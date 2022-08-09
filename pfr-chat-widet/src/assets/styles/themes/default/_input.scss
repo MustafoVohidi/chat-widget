@@ -1,0 +1,30 @@
+.app-input {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  .app-icon {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  label {
+    position: absolute;
+    top: 5px;
+    left: 8px;
+  }
+
+  input {
+    padding: 10px 10px 10px 40px;
+    border: none;
+    color: $primary;
+    background-color: $secondaryLight;
+    display: block;
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 3px 1px $primary;
+  }
+}

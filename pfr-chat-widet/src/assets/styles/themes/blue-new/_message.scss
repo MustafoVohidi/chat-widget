@@ -1,0 +1,97 @@
+@import 'variables';
+
+.chat-message {
+  gap: 0;
+  z-index: 3;
+  &-content {
+    box-shadow: 0 0 15px $grey;
+
+    &-title {
+      font-size: 12px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      gap: 8px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: #B4B2CA;
+      font-family: 'Montserrat';
+    }
+  }
+
+  &-avatar {
+    width: 45px;
+    height: 40px;
+    background-size: 80%;
+    background-position: top left;
+    background-repeat: no-repeat;
+  }
+
+}
+.chat-message-system {
+  .chat-message-content {
+    width: calc(100% - 60px);
+    background-color: #F7F7FF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: $black;
+    border-radius: 0px $borderRadius $borderRadius
+      $borderRadius;
+    &-title {
+      &-name {
+        font-weight: bold;
+      }
+    }
+  }
+  .chat-message-avatar {
+    background-image: url($systemAvatar);
+  }
+}
+.chat-message-operator {
+  .chat-message-content {
+    width: calc(100% - 60px);
+    background-color: #E8F7F4;
+    color: $black;
+    &-title {
+      &-name {
+      }
+    }
+    .chat-message-content-body {
+      height: auto;
+    }
+  }
+  .chat-message-avatar {
+    background-image: url($operatorAvatar);
+  }
+}
+.chat-message-user {
+  .chat-message-content {
+    max-width: 100%;
+    background-color: $blue;
+    border-radius: $borderRadius 0px $borderRadius
+      $borderRadius !important;
+    color: $white;
+    .chat-message-content-title {
+      width: 100%;
+      text-align: right;
+      justify-content: end;
+      flex-direction: row;
+      gap: 8px !important;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: #B4B2CA;
+      font-family: 'Montserrat';
+      &-name{
+        white-space: nowrap !important;
+      }
+    }
+    &-body {
+      font-weight: bold;
+    }
+  }
+  .chat-message-avatar {
+    display: none;
+  }
+
+}

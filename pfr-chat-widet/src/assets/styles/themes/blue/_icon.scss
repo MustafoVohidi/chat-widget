@@ -1,0 +1,13 @@
+@import 'variables';
+
+.icon {
+  &.icon-resize {
+    background-image: url($resizeIcon);
+  }
+  &.icon-send {
+    background-image: url($sendIcon);
+  }
+  &.icon-close {
+    background-image: url($closeIcon);
+  }
+}

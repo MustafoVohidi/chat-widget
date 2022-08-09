@@ -1,0 +1,26 @@
+.app-input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  .app-icon {
+    padding-top: 11px;
+  }
+  label {
+    top: 7px;
+    left: 12px;
+  }
+
+  input {
+    border-radius: 12px;
+    padding: 10px 10px 10px 40px;
+    color: $blue;
+    box-shadow: 0 0 3px 1px $grey;
+    display: block;
+    width: 100%;
+    transition: 0.75s;
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 3px 1px $blue;
+  }
+}

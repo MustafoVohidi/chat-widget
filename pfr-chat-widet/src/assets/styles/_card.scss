@@ -1,0 +1,64 @@
+&-card {
+  height: calc(100% - 200px);
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 2;
+
+  &-header {
+    display: flex;
+    column-gap: 10px;
+    padding: 15px 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    .app-icon {
+      cursor: pointer;
+    }
+  }
+
+  &-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    overflow: hidden;
+
+    .ready-answers {
+      display: flex;
+      gap: 10px;
+      border-top: 1px solid $secondaryLight;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (min-width: $sm) {
+    &.maximized {
+      width: calc(100vw - 120px) !important;
+      height: calc(100vh - 145px) !important;
+    }
+  }
+
+  @media (max-width: $sm) {
+    position: fixed;
+    width: 100% !important;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+
+    &-body,
+    &-header,
+    * .app-textarea,
+    * textarea {
+    }
+    &-header {
+      &-close {
+        display: inherit !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import 'variables';
+
+@mixin theme-blue {
+  color: $black;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+
+  input,
+  button,
+  textarea {
+    font-size: $fontSize;
+    font-family: $fontFamily;
+  }
+
+  .chat-box {
+    @import 'activator';
+    @import 'card';
+    @import 'input';
+    @import 'icon';
+    @import 'button';
+    @import 'message';
+  }
+}

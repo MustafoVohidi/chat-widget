@@ -1,0 +1,284 @@
+.ready-answers {
+
+  border-top-left-radius: $borderRaduis-new;
+  border-top-right-radius: $borderRaduis-new;
+  border-top: 1px solid #F3F3F3;
+  box-shadow: 0px -6px 8px rgba(0, 0, 0, 0.25);
+  border-bottom: none;
+  background: #fff;
+  position: relative;
+  z-index: 222;
+  top: 15px;
+  padding-bottom: 25px;
+  margin-top: -45px;
+}
+
+.chat-box-card-body {
+
+  border-radius: $borderRaduis-new !important;
+  margin-top: -27px;
+  z-index: 120;
+
+}
+
+.chat-box-card-header {
+  min-height: 120px;
+  border-top-left-radius: $borderRaduis-new;
+  border-top-right-radius: $borderRaduis-new;
+}
+
+.user-form {
+  position: relative;
+  border-radius: $borderRaduis-new;
+
+}
+@media (max-width: $sm) {
+
+  .user-form {
+    position: relative;
+    border-radius: 0;
+    border-top-right-radius: $borderRaduis-new;
+    border-top-left-radius: $borderRaduis-new;
+  }
+
+  .chat-box-card-body {
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+}
+
+.form-tooltip {
+  background: #FDEEEE;
+  border: 1px solid #FBCFD2;
+  border-radius: 25px;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'Segoe UI';
+  color: #C74952;
+  padding: 7px 16px;
+  display: inline-block;
+  position: absolute;
+  z-index: 500;
+  &:after {
+    background-image: url($polygon);
+    content: "";
+    width: 14px;
+    height: 6px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 40%;
+  }
+
+  &:first-child {
+    left: 80px;
+    top: -9px;
+    &:after {
+      top: 100%;
+      left: 49%;
+    }
+  }
+  &:last-of-type {
+    left: 55px;
+    &:after {
+      transform: rotate(180deg);
+      top: -8px;
+      left: 49%;
+    }
+  }
+}
+
+.app-input  {
+  input {
+    &::placeholder {
+      color: #CDCFD7;
+    }
+  }
+}
+
+.app-input.erred {
+
+  input {
+    color: #C74952;
+    border-color: #FBCFD2;
+    box-shadow: none;
+
+    &:focus {
+      color: #C74952;
+      border-color: #FBCFD2;
+    }
+  }
+}
+
+.app-input.not-erred {
+  input {
+    color: #008E7D;
+    background: #E5F8F4;
+    border-color: #A5E8DA;
+  }
+}
+
+
+.app-textarea {
+  padding: 20px 14px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  min-height: 80px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  textarea {
+    height: 38px;
+    max-height: 185px;
+    padding: 9px 37px 9px 18px;
+    border: 1px solid #CDCFD7;
+    border-radius: 20px;
+    background: #F0F3F8;
+    &::placeholder {
+      color: #CDCFD7;
+    }
+  }
+}
+
+.send-quality-list {
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color:rgba(255,255,255, 0.7);
+  top: -30px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .app-button {
+    width: 185px;
+    height: 42px;
+    background: #0B75BA;
+    border-radius: $borderRaduis-new;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 4vh;
+    position: relative;
+    z-index: 1;
+  }
+
+  #send-quality-thanks {
+
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 120%;
+
+    /* or 38px */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+  }
+
+  #send-quality {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+
+    /* identical to box height, or 24px */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+
+    color: #181A1F;
+  }
+
+  .app-icon {
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  #session-end {
+
+
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+
+    /* or 29px */
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #181A1F;
+
+  }
+
+  .app-textarea {
+    padding: 0;
+    width: 93%;
+    position: absolute;
+    bottom: 55px;
+    box-shadow: none;
+    .app-textarea-actions {
+      top: -5px;
+      right: 0;
+    }
+  }
+
+  .send-quality-comment {
+    width: 96%;
+    padding: 10px 18px;
+
+    position: absolute;
+    bottom: 55px;
+    background: #F0F3F8;
+    border: 1px solid #CDCFD7;
+    border-radius: 30px;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #101112;
+    word-break: break-all;
+  }
+
+  textarea {
+    padding-right: 18px;
+  }
+}
+
+.blur {
+  .chat-message {
+    filter: blur(5px);
+  }
+
+}
+.backdrop-blur{
+  backdrop-filter: blur(5px);
+}
+
+.bgRed {
+  background-color: #C74952;
+
+  &:hover {
+    background-color: #AF434B;
+  }
+
+  &:active {
+    background-color: #9A3940;
+  }
+}
+
+.d-none {
+  display: none;
+}

@@ -1,0 +1,73 @@
+@import 'variables';
+
+.chat-message {
+  gap: 0;
+  z-index: 3;
+  &-content {
+    box-shadow: 0 0 15px $grey;
+
+    &-title {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+
+  &-avatar {
+    width: 70px;
+    height: 70px;
+  }
+}
+.chat-message-system {
+  .chat-message-content {
+    width: calc(100% - 70px);
+    background-color: $white;
+    color: $black;
+    border-radius: 0px $borderRadius $borderRadius
+      $borderRadius;
+    &-title {
+      color: $blackLight;
+      &-name {
+        font-weight: bold;
+      }
+    }
+  }
+  .chat-message-avatar {
+    background-image: url($systemAvatar);
+  }
+}
+.chat-message-operator {
+  .chat-message-content {
+    width: calc(100% - 70px);
+    background-color: $white;
+    color: $black;
+    &-title {
+      color: $blue;
+      &-name {
+        font-weight: bold;
+      }
+    }
+  }
+  .chat-message-avatar {
+    background-image: url($operatorAvatar);
+  }
+}
+.chat-message-user {
+  .chat-message-content {
+    width: 100%;
+    background-color: $blue;
+    border-radius: $borderRadius 0px $borderRadius
+      $borderRadius;
+    color: $white;
+    &-title {
+      color: $greyLight;
+    }
+    &-body {
+      font-weight: bold;
+    }
+  }
+  .chat-message-avatar {
+    display: none;
+  }
+}

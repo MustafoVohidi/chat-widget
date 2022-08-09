@@ -1,0 +1,38 @@
+export default {
+  state: {
+    answers: 'answers',
+    sendQualityForAgent: 'sendQualityForAgent',
+    messages: 'messages',
+    opened: 'opened',
+    loading: 'loading',
+    user: 'user',
+    options: 'options',
+    currentOperator: 'currentOperator',
+    pingTimer: 'pingTimer',
+    sessionId: 'sessionId',
+    sessionTimer: 'sessionTimer',
+  },
+  getters: {
+    anonymouseUser: 'anonymouseUser',
+  },
+  mutations: {
+    SOCKET_ONMESSAGE: 'SOCKET_ONMESSAGE',
+    SOCKET_ONOPEN: 'SOCKET_ONOPEN',
+    SOCKET_ONCLOSE: 'SOCKET_ONCLOSE',
+    SET_USER: 'SET_USER',
+    SET_LOADING: 'SET_LOADING',
+    INIT_OPTIONS: 'INIT_OPTIONS',
+    ADD_MESSAGES: 'ADD_MESSAGES',
+    SET_PING_TIMER: 'SET_PING_TIMER',
+    CLEAR_ANSWERS: 'CLEAR_ANSWERS',
+    SESSION_TIMER: 'SESSION_TIMER',
+  },
+  actions: {
+    send: 'send',
+    sendQuality: 'sendQuality',
+    sendTyping: 'sendTyping',
+    register: 'register',
+    connect: 'connect',
+    startPingTimer: 'startPingTimer',
+  },
+}

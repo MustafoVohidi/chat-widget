@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'utils/animation.scss';
+@import 'utils/breakpoints.scss';
+@import 'utils/padding.scss';
+@import 'utils/text.scss';
+@import 'utils/cursor.scss';
+@import 'core';
+
+@import 'chat-box';
+@import 'user-form';
+@import 'themes';
+
+* {
+  box-sizing: border-box;
+  line-height: initial;
+}

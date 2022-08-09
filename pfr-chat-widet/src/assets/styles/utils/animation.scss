@@ -1,0 +1,41 @@
+.slide-right-enter {
+  opacity: 0;
+  transform: scale3d(1.25, 0.5, 1) translate3d(0px, 0, 0);
+}
+.slide-right-enter-to {
+  transform: scale3d(1, 1, 1);
+}
+.slide-right-enter-active {
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.slide-right-leave-active {
+  transition: 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.slide-right-leave {
+  transform: scale3d(1, 1, 1);
+}
+.slide-right-leave-to {
+  opacity: 0;
+  transform: scale3d(1.25, 0.5, 1) translate3d(0px, 0, 0);
+}
+
+.slide-down-enter {
+  opacity: 0;
+  transform: scale3d(0.25, 0.5, 1) translate3d(0px, 0, 0);
+}
+.slide-down-enter-to {
+  transform: scale3d(1, 1, 1);
+}
+.slide-down-enter-active {
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.slide-down-leave-active {
+  transition: 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.slide-down-leave {
+  transform: scale3d(1, 1, 1);
+}
+.slide-down-leave-to {
+  opacity: 0;
+  transform: scale3d(0.25, 0.5, 1) translate3d(0px, 0, 0);
+}

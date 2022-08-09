@@ -1,0 +1,36 @@
+$margin-space-map: (
+  '5': 5px,
+  '10': 10px,
+  '15': 15px,
+  '20': 20px,
+);
+
+@mixin margins($spaces) {
+  @each $name, $value in $spaces {
+    .ml-#{$name} {
+      margin-left: $value;
+    }
+    .mr-#{$name} {
+      margin-right: $value;
+    }
+    .mb-#{$name} {
+      margin-bottom: $value;
+    }
+    .mt-#{$name} {
+      margin-top: $value;
+    }
+    .mx-#{$name} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+    .my-#{$name} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+    .ma-#{$name} {
+      margin: $value;
+    }
+  }
+}
+
+@include margins($margin-space-map);

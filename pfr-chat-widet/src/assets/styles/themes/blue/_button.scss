@@ -1,0 +1,31 @@
+.app-button {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: $blue;
+
+  .app-icon {
+    padding-top: 5px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    box-shadow: inset 0px 0px 2px 0px;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: inset 0px 0px 2px 0px;
+  }
+  &:disabled {
+    opacity: 1;
+    box-shadow: none;
+    cursor: not-allowed;
+    background-color: $grey !important;
+    color: $black;
+  }
+}
